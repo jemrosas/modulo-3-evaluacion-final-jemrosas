@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../stylesheets/App.scss';
 import logo from '../images/Rick_and_Morty_Logo.png';
+import SearchBar from './SearchBar';
 import CharacterList from './CharacterList';
 import receiveApiData from '../services/receiveApiData';
 
@@ -20,6 +21,7 @@ const App = () => {
           <img src={logo} alt='Logo de Rick y Morty' />
         </div>
       </header>
+      <SearchBar />
       <CharacterList charactersInfo={data} />
     </div>
   );
