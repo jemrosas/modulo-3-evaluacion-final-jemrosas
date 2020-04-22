@@ -2,9 +2,30 @@ import React from 'react';
 
 const CharacterCard = (props) => {
   return (
-    <div>
-      <p>Prueba :D</p>
-    </div>
+    <li className='card'>
+      <div className='card_img'>
+        <img src={props.characterInfo.image} alt={`Imagen de ${props.characterInfo.name}`} />
+      </div>
+      <div className='card_text'>
+        <h3>{props.characterInfo.name}</h3>
+        <p>
+          <span className='text_property'>Status: </span>
+          <span>{props.characterInfo.status}</span>
+        </p>
+        <p>
+          <span className='text_property'>Species: </span>
+          <span>{props.characterInfo.specie}</span>
+        </p>
+        <p>
+          <span className='text_property'>Origin: </span>
+          <span>{props.characterInfo.planet}</span>
+        </p>
+        <p>
+          <span className='text_property'>Episodes: </span>
+          <span>{props.characterInfo.episodes.length}</span>
+        </p>
+      </div>
+    </li>
   );
 };
 export default CharacterCard;
