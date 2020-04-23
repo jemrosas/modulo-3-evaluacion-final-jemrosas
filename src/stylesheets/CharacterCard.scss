@@ -1,0 +1,32 @@
+.card {
+  width: 150px;
+  height: 300px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  background-color: #a8e387;
+  border: 2px solid #d1ba4f;
+  border-radius: 5%;
+
+  &_container-img {
+    width: 170px;
+    height: 170px;
+  }
+
+  &_img {
+    height: 100%;
+    border-radius: 5%;
+    border: 2px solid #1c81a3;
+  }
+}
+.text_title {
+  margin: 5px;
+  font-family: 'Roboto', sans-serif;
+  color: #25b78c;
+}
+.text_paragraph {
+  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #25b78c;
+}

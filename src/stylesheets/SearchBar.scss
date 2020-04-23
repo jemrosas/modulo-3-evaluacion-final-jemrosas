@@ -1,0 +1,31 @@
+.form {
+  margin: 50px;
+
+  &_input {
+    width: 20%;
+    height: 60px;
+    background: transparent;
+    color: #88d962;
+    font-weight: bold;
+    border: none;
+    border-bottom: 2px solid red;
+    border-radius: 5%;
+    background-image: url('../images/snowball_ico.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    text-align: left;
+    padding-left: 60px;
+  }
+
+  &_input::placeholder {
+    text-align: center;
+    padding-right: 30px;
+    color: #d1ba4f;
+    font-size: 18px;
+  }
+
+  &_input:focus {
+    background-color: rgba(28, 129, 163, 0.6);
+    font-size: 18px;
+  }
+}
