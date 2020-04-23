@@ -4,7 +4,7 @@ const CharacterDetail = (props) => {
   return (
     <li className='card'>
       <div className='card_img'>
-        <img src={props.characterInfo.image} alt={`Imagen de ${props.characterInfo.name}`} />
+        <img src={props.characterInfo.image} alt={`${props.characterInfo.name}'s portrait`} />
       </div>
       <div className='card_text'>
         <h3>{props.characterInfo.name}</h3>

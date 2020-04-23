@@ -5,7 +5,7 @@ const CharacterCard = (props) => {
   return (
     <li className='card'>
       <div className='card_container-img'>
-        <img className='card_img' src={props.characterInfo.image} alt={`Imagen de ${props.characterInfo.name}`} />
+        <img className='card_img' src={props.characterInfo.image} alt={`${props.characterInfo.name}'s portrait`} />
       </div>
       <div className='card_text'>
         <h3 className='text_title'>{props.characterInfo.name}</h3>

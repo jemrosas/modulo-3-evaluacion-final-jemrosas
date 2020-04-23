@@ -8,22 +8,32 @@ import receiveApiData from '../services/receiveApiData';
 
 const App = () => {
   const [data, setData] = useState([]);
+  const [searchFilter, setSearchFilter] = useState('');
+  console.log('search', searchFilter);
 
   useEffect(() => {
     receiveApiData().then((data) => setData(data));
   }, []);
 
-  console.log(data);
+  const handleSearch = (data) => {
+    setSearchFilter(data.value);
+  };
+
+  const filterCharacters = data
+
+    .filter((character) => character.name.toUpperCase().includes(searchFilter))
+
+    .sort((a, b) => (a.name > b.name ? 1 : -1));
 
   return (
     <div className='App'>
       <header>
         <div className='logo'>
-          <img src={logo} alt='Logo de Rick y Morty' />
+          <img src={logo} alt='Rick and Morty logo' />
         </div>
       </header>
-      <SearchBar />
-      <CharacterList charactersInfo={data} />
+      <SearchBar handleSearch={handleSearch} />
+      <CharacterList charactersInfo={filterCharacters} />
       {/* <CharacterDetail/> */}
     </div>
   );
