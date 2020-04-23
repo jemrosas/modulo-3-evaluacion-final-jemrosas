@@ -4,6 +4,7 @@ import logo from '../images/Rick_and_Morty_Logo.png';
 import SearchBar from './SearchBar';
 import CharacterList from './CharacterList';
 import receiveApiData from '../services/receiveApiData';
+// import CharacterDetail from './CharacterDetail';
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -23,6 +24,7 @@ const App = () => {
       </header>
       <SearchBar />
       <CharacterList charactersInfo={data} />
+      {/* <CharacterDetail/> */}
     </div>
   );
 };
