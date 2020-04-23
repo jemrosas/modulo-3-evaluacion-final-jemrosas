@@ -10,7 +10,7 @@ const SearchBar = (props) => {
   return (
     <form className='form' action=''>
       <label className='form_label' htmlFor='searchField'>
-        <input className='form_input' type='text' name='searchField' id='searchField' placeholder='Insert character name' onChange={handleChange}></input>
+        <input className='form_input' type='text' name='searchField' id='searchField' placeholder='Insert character name' onChange={handleChange} autocomplete='off'></input>
       </label>
     </form>
   );
