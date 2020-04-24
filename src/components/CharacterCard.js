@@ -7,7 +7,7 @@ const CharacterCard = (props) => {
   return (
     <Link className='link' to={`/character/${props.characterInfo.id}`} replace>
       <li className='card'>
-        <div className='card_container-img'>
+        <div className='card_img'>
           <img className='card_img' src={props.characterInfo.image} alt={`${props.characterInfo.name}'s portrait`} />
         </div>
         <div className='card_text'>
