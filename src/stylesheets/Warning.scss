@@ -1,0 +1,19 @@
+.warning {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  &__text {
+    padding: 20px 50px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    color: #88d962;
+  }
+  &__image {
+    z-index: -1;
+    width: 50vh;
+    position: absolute;
+    bottom: 0px;
+  }
+}
