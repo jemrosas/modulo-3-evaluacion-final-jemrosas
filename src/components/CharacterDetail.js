@@ -1,12 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+// import '../stylesheets/CharacterDetail.scss';
 
 const CharacterDetail = (props) => {
   return (
-    <li className='card'>
-      <div className='card_img'>
+    <div className='modal'>
+      <div className='modal_img'>
         <img src={props.characterInfo.image} alt={`${props.characterInfo.name}'s portrait`} />
       </div>
-      <div className='card_text'>
+      <div className='modal_text'>
         <h3>{props.characterInfo.name}</h3>
         <p>
           <span className='text_property'>Status: </span>
@@ -25,7 +27,15 @@ const CharacterDetail = (props) => {
           <span>{props.characterInfo.episodes.length}</span>
         </p>
       </div>
-    </li>
+    </div>
   );
 };
 export default CharacterDetail;
+
+CharacterDetail.protoTypes = {
+  id: PropTypes.number,
+  name: PropTypes.string,
+  specie: PropTypes.string,
+  planet: PropTypes.string,
+  episodes: PropTypes.array,
+};
