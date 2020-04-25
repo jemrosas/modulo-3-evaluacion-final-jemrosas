@@ -3,6 +3,7 @@ import '../stylesheets/App.scss';
 import { Route, Switch } from 'react-router-dom';
 import logo from '../images/Rick_and_Morty_Logo.png';
 import SearchBar from './SearchBar';
+import Loading from './Loading';
 import CharacterList from './CharacterList';
 import receiveApiData from '../services/receiveApiData';
 import CharacterDetail from './CharacterDetail';
@@ -10,9 +11,12 @@ import CharacterDetail from './CharacterDetail';
 const App = () => {
   const [data, setData] = useState([]);
   const [searchFilter, setSearchFilter] = useState('');
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    receiveApiData().then((data) => setData(data));
+    receiveApiData()
+      .then((data) => setData(data))
+      .then(() => setLoading(false));
   }, []);
 
   const handleSearch = (data) => {
@@ -41,6 +45,7 @@ const App = () => {
         </div>
       </header>
       <SearchBar handleSearch={handleSearch} />
+      <Loading loading={loading} />
       <CharacterList charactersInfo={filterCharacters} />
       <Switch>
         <Route path='/character/:id' render={renderCharacterDetail} />
