@@ -38,18 +38,22 @@ const App = () => {
   };
 
   return (
-    <div className='App'>
-      <header>
+    <div className='app'>
+      <header className='app__header'>
         <div className='logo'>
           <img src={logo} alt='Rick and Morty logo' />
         </div>
+        <nav>
+          <SearchBar handleSearch={handleSearch} />
+        </nav>
       </header>
-      <SearchBar handleSearch={handleSearch} />
-      <Loading loading={loading} />
-      <CharacterList charactersInfo={filterCharacters} loading={loading} />
-      <Switch>
-        <Route path='/character/:id' render={renderCharacterDetail} />
-      </Switch>
+      <main className='app__main'>
+        <Loading loading={loading} />
+        <CharacterList charactersInfo={filterCharacters} loading={loading} />
+        <Switch>
+          <Route path='/character/:id' render={renderCharacterDetail} />
+        </Switch>
+      </main>
     </div>
   );
 };

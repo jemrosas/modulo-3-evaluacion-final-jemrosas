@@ -1,3 +1,5 @@
+@import './variables.scss';
+
 .link {
   text-decoration: none;
 }
@@ -8,17 +10,16 @@
   grid-template-rows: 150px 200px;
   grid-template-areas: 'image' 'text';
   border-radius: 18px;
-  background: #a8e387;
+  background: $brand-color-4;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
-  font-family: 'Orbitron', sans-serif;
+  font-family: $textFont;
   text-align: center;
 
-  &_container-img {
+  &__container-img {
     grid-area: image;
-    margin-bottom: 20px;
   }
 
-  &_img {
+  &__img {
     width: 200px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
@@ -27,18 +28,19 @@
   &__text {
     grid-area: text;
     justify-content: flex-end;
-    padding-top: 50px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+
+    &-title {
+      margin-top: 60px;
+      color: $brand-color-3;
+    }
+
+    &-paragraph {
+      font-family: $textFont;
+      font-size: $defaultFontSize;
+      font-weight: 500;
+      color: $paragraph-color;
+    }
   }
-}
-.text_title {
-  margin-top: 60px;
-  color: #25b78c;
-}
-.text_paragraph {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  color: black;
 }

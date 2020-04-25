@@ -1,12 +1,14 @@
-.form {
-  margin: 50px;
+@import './variables.scss';
 
-  &_input {
-    width: 20%;
+.form {
+  margin-top: 30px;
+
+  &__input {
+    width: 250px;
     height: 60px;
     background: transparent;
-    color: #88d962;
-    font-family: 'Roboto', sans-serif;
+    color: $brand-color-1;
+    font-family: $searchFont;
     font-weight: bold;
     border: none;
     border-bottom: 2px solid red;
@@ -16,17 +18,24 @@
     background-repeat: no-repeat;
     text-align: left;
     padding-left: 60px;
-  }
 
-  &_input::placeholder {
-    text-align: center;
-    padding-right: 30px;
-    color: #d1ba4f;
-    font-size: 18px;
-  }
+    @media all and (max-width: $displayM) {
+      width: 200px;
+    }
 
-  &_input:focus {
-    background-color: rgba(28, 129, 163, 0.6);
-    font-size: 18px;
+    @media all and (max-width: $displayS) {
+      width: 200px;
+    }
+
+    &::placeholder {
+      text-align: center;
+      padding-right: 30px;
+      color: $brand-color-5;
+      font-size: 18px;
+    }
+    &:focus {
+      background-color: rgba(28, 129, 163, 0.6);
+      font-size: 18px;
+    }
   }
 }

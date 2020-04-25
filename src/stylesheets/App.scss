@@ -1,3 +1,14 @@
-.App {
+@import './variables.scss';
+
+.app {
+  display: grid;
+  grid-template-rows: 400px 1fr;
+  grid-template-areas: 'header' 'main';
   text-align: center;
+  &__header {
+    grid-area: header;
+  }
+  &__main {
+    grid-area: main;
+  }
 }

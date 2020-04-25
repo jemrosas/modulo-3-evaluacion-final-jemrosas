@@ -7,13 +7,13 @@ const CharacterCard = (props) => {
   return (
     <Link className='link' to={`/character/${props.characterInfo.id}`} replace>
       <li className='card'>
-        <div className='card_img'>
-          <img className='card_img' src={props.characterInfo.image} alt={`${props.characterInfo.name}'s portrait`} />
+        <div className='card__container-img'>
+          <img className='card__img' src={props.characterInfo.image} alt={`${props.characterInfo.name}'s portrait`} />
         </div>
-        <div className='card_text'>
-          <h3 className='text_title'>{props.characterInfo.name}</h3>
-          <p className='text_paragraph'>{props.characterInfo.specie}</p>
-          <p className='text_paragraph'>{props.characterInfo.planet}</p>
+        <div className='card__text'>
+          <h3 className='card__text-title'>{props.characterInfo.name}</h3>
+          <p className='card__text-paragraph'>{props.characterInfo.specie}</p>
+          <p className='card__text-paragraph'>{props.characterInfo.planet}</p>
         </div>
       </li>
     </Link>

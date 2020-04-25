@@ -1,3 +1,5 @@
+@import './variables.scss';
+
 .modal {
   position: fixed;
   z-index: 1;
@@ -17,7 +19,7 @@
   &__content {
     padding: 1rem;
     border-radius: 3px;
-    border: solid 3px #d1ba4f;
+    border: solid 3px $brand-color-5;
     background-image: url(../images/wallpaper.jpg);
     display: flex;
     flex-direction: row;
@@ -42,18 +44,18 @@
   &__text {
     padding: 20px;
     text-align: left;
-    font-family: 'Orbitron', sans-serif;
+    font-family: $textFont;
     font-weight: 500;
-    color: black;
+    color: $paragraph-color;
   }
 
   &__text-error {
     padding: 20px;
     text-align: left;
-    font-family: 'Orbitron', sans-serif;
+    font-family: $textFont;
     font-size: 30px;
     font-weight: 700;
-    color: black;
+    color: $paragraph-color;
   }
 
   &__text--property {
@@ -66,7 +68,7 @@
   padding: 0.5rem 0.5rem;
   width: 0.5rem;
   text-align: center;
-  background-color: #1c81a3;
+  background-color: $brand-color-2;
   border: none;
   border-radius: 50%;
   cursor: pointer;
@@ -76,7 +78,7 @@
   text-align: center;
   text-decoration: none;
   outline: none;
-  color: #fff;
+  color: $icon-color;
 }
 
 .fa-times:before {

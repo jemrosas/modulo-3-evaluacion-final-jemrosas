@@ -1,3 +1,5 @@
+@import './variables.scss';
+
 .warning {
   display: flex;
   flex-direction: column;
@@ -6,10 +8,10 @@
 
   &__text {
     padding: 20px 50px;
-    font-family: 'Orbitron', sans-serif;
+    font-family: $textFont;
     font-size: 25px;
     font-weight: 500;
-    color: #88d962;
+    color: $brand-color-1;
   }
 
   &__image {
