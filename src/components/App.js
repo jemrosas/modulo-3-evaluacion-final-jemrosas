@@ -40,8 +40,8 @@ const App = () => {
   return (
     <div className='app'>
       <header className='app__header'>
-        <div className='logo'>
-          <img src={logo} alt='Rick and Morty logo' />
+        <div>
+          <img className='app__header-logo' src={logo} alt='Rick and Morty logo' />
         </div>
         <nav>
           <SearchBar handleSearch={handleSearch} />

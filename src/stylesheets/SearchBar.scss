@@ -21,10 +21,13 @@
 
     @media all and (max-width: $displayM) {
       width: 200px;
+      height: 60px;
+      background-image: url('../images/snowball_ico_s.png');
     }
 
     @media all and (max-width: $displayS) {
       width: 200px;
+      height: 50px;
     }
 
     &::placeholder {
@@ -32,10 +35,19 @@
       padding-right: 30px;
       color: $brand-color-5;
       font-size: 18px;
+
+      @media all and (max-width: $displayM) {
+        padding-right: 25px;
+        font-size: $defaultFontSize;
+      }
     }
     &:focus {
       background-color: rgba(28, 129, 163, 0.6);
       font-size: 18px;
+
+      @media all and (max-width: $displayM) {
+        font-size: $defaultFontSize;
+      }
     }
   }
 }

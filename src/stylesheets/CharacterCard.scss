@@ -15,6 +15,16 @@
   font-family: $textFont;
   text-align: center;
 
+  @media all and (max-width: $displayM) {
+    grid-template-columns: 150px;
+    grid-template-rows: 130px 150px;
+  }
+
+  @media all and (max-width: $displayS) {
+    grid-template-columns: 150px;
+    grid-template-rows: 125px 135px;
+  }
+
   &__container-img {
     grid-area: image;
   }
@@ -23,6 +33,10 @@
     width: 200px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
+
+    @media all and (max-width: $displayM) {
+      width: 150px;
+    }
   }
 
   &__text {
@@ -34,6 +48,15 @@
     &-title {
       margin-top: 60px;
       color: $brand-color-3;
+
+      @media all and (max-width: $displayM) {
+        margin-top: 30px;
+        font-size: 14px;
+      }
+
+      @media all and (max-width: $displayS) {
+        font-size: 13px;
+      }
     }
 
     &-paragraph {
@@ -41,6 +64,14 @@
       font-size: $defaultFontSize;
       font-weight: 500;
       color: $paragraph-color;
+
+      @media all and (max-width: $displayM) {
+        font-size: 13px;
+      }
+
+      @media all and (max-width: $displayS) {
+        font-size: 11px;
+      }
     }
   }
 }

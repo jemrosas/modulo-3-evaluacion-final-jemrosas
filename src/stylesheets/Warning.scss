@@ -12,6 +12,14 @@
     font-size: 25px;
     font-weight: 500;
     color: $brand-color-1;
+
+    @media all and (max-width: $displayM) {
+      font-size: 20px;
+    }
+
+    @media all and (max-width: $displayS) {
+      font-size: 15px;
+    }
   }
 
   &__image {
@@ -19,5 +27,13 @@
     width: 50vh;
     position: absolute;
     bottom: 0px;
+
+    @media all and (max-width: $displayM) {
+      width: 45vh;
+    }
+
+    @media all and (max-width: $displayS) {
+      width: 30vh;
+    }
   }
 }

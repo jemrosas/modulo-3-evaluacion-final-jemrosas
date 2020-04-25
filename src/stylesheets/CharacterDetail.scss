@@ -3,11 +3,17 @@
 .modal {
   position: fixed;
   z-index: 1;
-  left: 0;
-  top: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
+  max-width: 700px;
   height: 100%;
   background-color: rgba(28, 129, 163, 0.4);
+
+  @media all and (max-width: $displayM) {
+    max-width: 300px;
+  }
 
   &__dialog {
     height: 100%;
