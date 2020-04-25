@@ -46,6 +46,7 @@
     font-weight: 500;
     color: black;
   }
+
   &__text-error {
     padding: 20px;
     text-align: left;
@@ -54,10 +55,12 @@
     font-weight: 700;
     color: black;
   }
+
   &__text--property {
     font-weight: 600;
   }
 }
+
 .icon {
   margin: 0.25rem;
   padding: 0.5rem 0.5rem;
@@ -75,6 +78,7 @@
   outline: none;
   color: #fff;
 }
+
 .fa-times:before {
   content: '\f0e2';
 }
