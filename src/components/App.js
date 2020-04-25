@@ -27,7 +27,7 @@ const App = () => {
 
     .filter((character) => character.name.toUpperCase().includes(searchFilter))
 
-    .sort((a, b) => (a.name > b.name ? 1 : -1));
+    .sort((characterA, characterB) => (characterA.name > characterB.name ? 1 : -1));
 
   const renderCharacterDetail = (routerProps) => {
     const clickedCharacter = parseInt(routerProps.match.params.id);
