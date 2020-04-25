@@ -46,7 +46,7 @@ const App = () => {
       </header>
       <SearchBar handleSearch={handleSearch} />
       <Loading loading={loading} />
-      <CharacterList charactersInfo={filterCharacters} />
+      <CharacterList charactersInfo={filterCharacters} loading={loading} />
       <Switch>
         <Route path='/character/:id' render={renderCharacterDetail} />
       </Switch>

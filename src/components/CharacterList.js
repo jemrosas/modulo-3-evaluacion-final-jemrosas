@@ -8,7 +8,7 @@ const CharacterList = (props) => {
     return <CharacterCard className='characterCard' key={card.id} characterInfo={card} />;
   });
 
-  if (charactersList.length === 0) {
+  if (charactersList.length === 0 && props.loading === false) {
     return <Warning />;
   }
 
